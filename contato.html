@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>RockByte Studio - Contato</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7f0df2",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#191022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display min-h-screen flex flex-col overflow-x-hidden selection:bg-primary selection:text-white">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 w-full border-b border-white/5 bg-background-dark/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <img src="assets/images/logo.jpeg" alt="RockByte Studio" class="h-8 w-auto rounded-md">
+                    <span class="text-white text-lg font-bold tracking-tight">RockByte Studio</span>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium text-slate-300 hover:text-white transition-colors"
+                        href="index.html">Home</a>
+
+                    <a class="text-sm font-medium text-slate-300 hover:text-white transition-colors"
+                        href="pacotes.html">Pacotes</a>
+                    <a class="bg-primary hover:bg-primary-dark text-white text-sm font-bold py-2 px-5 rounded-lg transition-all duration-300 shadow-[0_0_15px_rgba(127,13,242,0.5)] hover:shadow-[0_0_25px_rgba(127,13,242,0.7)]"
+                        href="contato.html">
+                        Falar com um Especialista
+                    </a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-white p-2">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <main class="flex-1 w-full flex flex-col justify-center">
+        <div
+            class="layout-container flex h-full grow flex-col w-full max-w-7xl mx-auto px-4 md:px-10 lg:px-20 py-8 lg:py-12">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+                <!-- Left Column: Info -->
+                <div class="flex flex-col gap-8 justify-center animate-fade-in-up">
+                    <div class="space-y-4">
+                        <span class="text-primary font-bold text-sm tracking-widest uppercase">Contato</span>
+                        <h1 class="text-white text-4xl lg:text-5xl font-black leading-[1.1] tracking-[-0.033em]">
+                            Vamos construir o futuro digital da sua empresa
+                        </h1>
+                        <p class="text-slate-300 text-base lg:text-lg leading-relaxed max-w-md">
+                            Estamos prontos para resolver seus desafios de TI. Preencha o formulário ou entre em contato
+                            diretamente pelos nossos canais.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-6 mt-4">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-primary/20 p-3 rounded-lg text-primary">
+                                <span class="material-symbols-outlined text-2xl">mail</span>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-lg">E-mail</h3>
+                                <p class="text-slate-400">contato@rockbytestudio.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-primary/20 p-3 rounded-lg text-primary">
+                                <span class="material-symbols-outlined text-2xl">call</span>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-lg">Telefone</h3>
+                                <p class="text-slate-400">+55 (11) 9999-9999</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-primary/20 p-3 rounded-lg text-primary">
+                                <span class="material-symbols-outlined text-2xl">location_on</span>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-lg">Localização</h3>
+                                <p class="text-slate-400">São Paulo, Brasil</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Map Placeholder -->
+                    <div class="w-full h-48 rounded-xl overflow-hidden relative border border-[#362249] mt-4">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-80 hover:opacity-100 transition-opacity duration-300"
+                            data-alt="Dark themed map showing the location of RockByte Studio in Sao Paulo"
+                            data-location="Sao Paulo, Brazil"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCHxIfj499PyodcVd2-5HbZITRGn0ZsVDuFelS-sfgIKm62YgXIgAGrdFXXW_8rQ0B6hLoUJG6AUOJvkelGjIE65xQeqFkwMORbGmKpSprO4OvPEA_Ugi2KK09Lq9r-x5J0dfquHbuymv8YxZ2PTLPsG9wHMZN2MDG3gLklelfEoqseXMS3d7J1qhHWQF_DYyutX5-h6am3HfV_KaEPhfE0NSsQ0ZqxZeU929N7elJ078u39cZJLSkFVridfqChr0krZUG9zL9rZ9A');">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent pointer-events-none">
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column: Form -->
+                <div class="flex flex-col">
+                    <div
+                        class="bg-[#261834]/50 border border-[#362249] p-6 md:p-8 rounded-2xl shadow-2xl backdrop-blur-sm relative overflow-hidden group">
+                        <!-- Decorative gradient blob -->
+                        <div
+                            class="absolute -top-20 -right-20 w-64 h-64 bg-primary/20 rounded-full blur-[80px] pointer-events-none">
+                        </div>
+                        <h3 class="text-white text-2xl font-bold mb-6 relative z-10">Envie uma Mensagem</h3>
+                        <form class="flex flex-col gap-5 relative z-10">
+                            <!-- Name -->
+                            <label class="flex flex-col w-full">
+                                <span class="text-slate-300 text-sm font-medium pb-2">Nome Completo</span>
+                                <div class="relative">
+                                    <span
+                                        class="absolute left-4 top-1/2 -translate-y-1/2 text-primary material-symbols-outlined text-[20px]">person</span>
+                                    <input
+                                        class="form-input flex w-full rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#4d3168] bg-[#1a1023] focus:border-primary h-12 pl-12 pr-4 placeholder:text-[#ad90cb]/50 text-base transition-all duration-200"
+                                        placeholder="Seu nome" type="text" />
+                                </div>
+                            </label>
+                            <div class="flex flex-col md:flex-row gap-5">
+                                <!-- Email -->
+                                <label class="flex flex-col w-full md:w-1/2">
+                                    <span class="text-slate-300 text-sm font-medium pb-2">E-mail Corporativo</span>
+                                    <div class="relative">
+                                        <span
+                                            class="absolute left-4 top-1/2 -translate-y-1/2 text-primary material-symbols-outlined text-[20px]">mail</span>
+                                        <input
+                                            class="form-input flex w-full rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#4d3168] bg-[#1a1023] focus:border-primary h-12 pl-12 pr-4 placeholder:text-[#ad90cb]/50 text-base transition-all duration-200"
+                                            placeholder="nome@empresa.com" type="email" />
+                                    </div>
+                                </label>
+                                <!-- Company -->
+                                <label class="flex flex-col w-full md:w-1/2">
+                                    <span class="text-slate-300 text-sm font-medium pb-2">Nome da Empresa</span>
+                                    <div class="relative">
+                                        <span
+                                            class="absolute left-4 top-1/2 -translate-y-1/2 text-primary material-symbols-outlined text-[20px]">domain</span>
+                                        <input
+                                            class="form-input flex w-full rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#4d3168] bg-[#1a1023] focus:border-primary h-12 pl-12 pr-4 placeholder:text-[#ad90cb]/50 text-base transition-all duration-200"
+                                            placeholder="Sua Empresa" type="text" />
+                                    </div>
+                                </label>
+                            </div>
+                            <!-- Subject -->
+                            <label class="flex flex-col w-full">
+                                <span class="text-slate-300 text-sm font-medium pb-2">Assunto</span>
+                                <div class="relative">
+                                    <span
+                                        class="absolute left-4 top-1/2 -translate-y-1/2 text-primary material-symbols-outlined text-[20px]">label</span>
+                                    <select
+                                        class="form-select flex w-full rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#4d3168] bg-[#1a1023] focus:border-primary h-12 pl-12 pr-10 placeholder:text-[#ad90cb]/50 text-base transition-all duration-200 appearance-none">
+                                        <option disabled="" selected="" value="">Selecione o assunto</option>
+                                        <option>Desenvolvimento de Software</option>
+                                        <option>Consultoria de TI</option>
+                                        <option>Infraestrutura</option>
+                                        <option>Outros</option>
+                                    </select>
+                                </div>
+                            </label>
+                            <!-- Message -->
+                            <label class="flex flex-col w-full">
+                                <span class="text-slate-300 text-sm font-medium pb-2">Mensagem</span>
+                                <textarea
+                                    class="form-textarea flex w-full resize-none rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#4d3168] bg-[#1a1023] focus:border-primary min-h-[120px] p-4 placeholder:text-[#ad90cb]/50 text-base transition-all duration-200"
+                                    placeholder="Como podemos ajudar sua empresa hoje?"></textarea>
+                            </label>
+                            <!-- Submit Button -->
+                            <button
+                                class="mt-4 w-full cursor-pointer flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-[0_4px_20px_rgba(127,13,242,0.4)]"
+                                type="button">
+                                <span class="material-symbols-outlined mr-2">send</span>
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="border-t border-[#362249] bg-[#120b18] pt-16 pb-8 px-10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
+            <div class="flex flex-col gap-4 max-w-sm">
+                <div class="flex items-center gap-2 text-white mb-2">
+                    <img src="assets/images/logo.jpeg" alt="RockByte Studio" class="h-6 w-auto rounded-md">
+                    <span class="text-lg font-bold">RockByte Studio</span>
+                </div>
+                <p class="text-slate-500 text-sm">Transformando complexidade tecnológica em vantagem competitiva para o
+                    seu negócio.</p>
+            </div>
+            <div class="flex gap-12 md:gap-24 flex-wrap">
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wide">Navegação</h4>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="index.html">Home</a>
+
+                    <a class="text-slate-400 hover:text-primary transition-colors text-sm"
+                        href="pacotes.html">Pacotes</a>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="#">Sobre Nós</a>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wide">Legal</h4>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="#">Privacidade</a>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="#">Termos de Uso</a>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wide">Contato</h4>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-sm"
+                        href="#">contato@rockbyte.com</a>
+                    <div class="flex gap-4 mt-1">
+                        <a class="text-slate-400 hover:text-white transition-colors" href="#"><i
+                                class="material-symbols-outlined text-[20px]">public</i></a>
+                        <a class="text-slate-400 hover:text-white transition-colors" href="#"><i
+                                class="material-symbols-outlined text-[20px]">mail</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="mt-12 border-t border-[#362249] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-600">
+            <p>© 2024 RockByte Studio. Todos os direitos reservados.</p>
+            <p>Designed with precision.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

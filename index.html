@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>RockByte Studio - Soluções em Tecnologia</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Theme Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7f0df2",
+                        "primary-dark": "#5e0ab5",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#120c18", // Darker for deep background
+                        "background-card": "#1a1023", // Slightly lighter for cards
+                        "surface-dark": "#2d1b3e",
+                        "surface-card": "#241630",
+                        "border-dark": "#362249",
+                        "text-secondary": "#ad90cb"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #ffffff, #ad90cb);
+        }
+
+        .purple-glow {
+            box-shadow: 0 0 40px -10px rgba(127, 13, 242, 0.3);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased selection:bg-primary selection:text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 w-full border-b border-white/5 bg-background-dark/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <img src="assets/images/logo.jpeg" alt="RockByte Studio" class="h-8 w-auto rounded-md">
+                    <span class="text-white text-lg font-bold tracking-tight">RockByte Studio</span>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium text-white" href="index.html">Home</a>
+                    <a class="text-sm font-medium text-slate-300 hover:text-white transition-colors"
+                        href="pacotes.html">Pacotes</a>
+                    <a class="bg-primary hover:bg-primary-dark text-white text-sm font-bold py-2 px-5 rounded-lg transition-all duration-300 shadow-[0_0_15px_rgba(127,13,242,0.5)] hover:shadow-[0_0_25px_rgba(127,13,242,0.7)]"
+                        href="contato.html">
+                        Falar com um Especialista
+                    </a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-white p-2">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-32 lg:pt-32 overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px]">
+            </div>
+            <div class="absolute bottom-[0%] left-[-10%] w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px]">
+            </div>
+            <div
+                class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150">
+            </div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-sm">
+                <span class="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+                <span class="text-xs font-medium text-text-secondary uppercase tracking-wider">Tecnologia
+                    Corporativa</span>
+            </div>
+            <h1
+                class="text-4xl md:text-6xl lg:text-7xl font-black text-white tracking-tight mb-6 max-w-5xl leading-tight">
+                Transformando Tecnologia em <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#c084fc]">Crescimento
+                    Estratégico</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-10 leading-relaxed">
+                Soluções digitais de ponta e infraestrutura de TI robusta para empresas que não podem parar. A parceira
+                ideal para escalar sua operação.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <button
+                    class="flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold py-4 px-8 rounded-xl transition-all shadow-[0_4px_20px_rgba(127,13,242,0.4)] hover:shadow-[0_4px_30px_rgba(127,13,242,0.6)] hover:-translate-y-1">
+                    <span>Falar com um especialista</span>
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </button>
+                <button
+                    class="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-bold py-4 px-8 rounded-xl transition-all hover:-translate-y-1 backdrop-blur-sm">
+                    <span>Conhecer soluções</span>
+                </button>
+            </div>
+            <!-- Dashboard Preview / Abstract Image -->
+            <div class="mt-20 w-full max-w-5xl relative group">
+                <div
+                    class="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
+                </div>
+                <div class="relative rounded-2xl bg-[#0f0a15] border border-white/10 overflow-hidden shadow-2xl">
+                    <div class="h-10 border-b border-white/5 bg-white/5 flex items-center px-4 gap-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div>
+                    </div>
+                    <div class="relative w-full aspect-[16/9] bg-background-card"
+                        data-alt="Abstract digital dashboard interface showing analytics charts and server status nodes glowing in purple and blue on a dark background">
+                        <!-- Simulated Dashboard Content using CSS/HTML shapes -->
+                        <div class="absolute inset-0 p-8 grid grid-cols-3 gap-6">
+                            <div class="col-span-2 space-y-6">
+                                <div
+                                    class="h-48 rounded-lg bg-gradient-to-br from-white/5 to-transparent border border-white/5 p-4 flex items-end gap-2">
+                                    <div class="w-full bg-primary/20 h-[40%] rounded-sm"></div>
+                                    <div class="w-full bg-primary/40 h-[70%] rounded-sm"></div>
+                                    <div class="w-full bg-primary/60 h-[50%] rounded-sm"></div>
+                                    <div class="w-full bg-primary/80 h-[85%] rounded-sm"></div>
+                                    <div
+                                        class="w-full bg-primary h-[60%] rounded-sm relative shadow-[0_0_15px_rgba(127,13,242,0.5)]">
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-6">
+                                    <div class="h-24 rounded-lg bg-white/5 border border-white/5"></div>
+                                    <div class="h-24 rounded-lg bg-white/5 border border-white/5"></div>
+                                </div>
+                            </div>
+                            <div class="col-span-1 space-y-6">
+                                <div class="h-full rounded-lg bg-white/5 border border-white/5 p-4 flex flex-col gap-3">
+                                    <div class="w-full h-2 bg-white/10 rounded-full"></div>
+                                    <div class="w-2/3 h-2 bg-white/10 rounded-full"></div>
+                                    <div class="w-full h-2 bg-white/10 rounded-full mt-4"></div>
+                                    <div class="w-1/2 h-2 bg-white/10 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Trust / Technologies Section (Moved Here) -->
+    <div class="border-y border-white/5 bg-background-dark py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-slate-500 text-sm font-medium mb-8 uppercase tracking-widest">Tecnologias que
+                dominamos</p>
+            <div
+                class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <!-- Tech Logos -->
+                <span
+                    class="flex items-center gap-2 rounded-full bg-surface-dark border border-[#1e293b] px-4 py-2 text-sm font-bold text-white shadow-sm">
+                    <span class="material-symbols-outlined text-[#e34c26] text-lg">html</span> HTML5
+                </span>
+                <span
+                    class="flex items-center gap-2 rounded-full bg-surface-dark border border-[#1e293b] px-4 py-2 text-sm font-bold text-white shadow-sm">
+                    <span class="material-symbols-outlined text-[#264de4] text-lg">css</span> CSS3
+                </span>
+                <span
+                    class="flex items-center gap-2 rounded-full bg-surface-dark border border-[#1e293b] px-4 py-2 text-sm font-bold text-white shadow-sm">
+                    <span class="material-symbols-outlined text-[#f0db4f] text-lg">javascript</span> JavaScript
+                </span>
+                <span
+                    class="flex items-center gap-2 rounded-full bg-surface-dark border border-[#1e293b] px-4 py-2 text-sm font-bold text-white shadow-sm">
+                    <span class="material-symbols-outlined text-[#007acc] text-lg">code</span> TypeScript
+                </span>
+                <span
+                    class="flex items-center gap-2 rounded-full bg-surface-dark border border-[#1e293b] px-4 py-2 text-sm font-bold text-white shadow-sm">
+                    <span class="material-symbols-outlined text-[#61dbfb] text-lg">data_object</span> React
+                </span>
+                <span
+                    class="flex items-center gap-2 rounded-full bg-surface-dark border border-[#1e293b] px-4 py-2 text-sm font-bold text-white shadow-sm">
+                    <span class="material-symbols-outlined text-[#38bdf8] text-lg">wind_power</span> Tailwind CSS
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- Visão de Parceria (New Section) -->
+    <section class="py-24 bg-background-dark border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-3">Visão Estratégica</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-white mb-6">Tecnologia não é custo.<br>É alavanca de
+                        crescimento.</h3>
+                    <p class="text-slate-400 text-lg leading-relaxed mb-6">
+                        Muitas empresas veem a TI apenas como suporte técnico. Nós vemos como o motor que impulsiona sua
+                        operação.
+                        Na RockByte, atuamos como parceiros estratégicos, desenhando soluções que não apenas resolvem
+                        problemas,
+                        mas abrem novas oportunidades de receita e eficiência.
+                    </p>
+                    <div class="flex flex-col gap-4">
+                        <div
+                            class="flex items-start gap-4 p-4 rounded-xl bg-surface-card border border-white/5 hover:border-primary/30 transition-colors">
+                            <span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Inteligência de Negócio</h4>
+                                <p class="text-slate-400 text-sm">Entendemos seu mercado para aplicar a tecnologia
+                                    certa.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start gap-4 p-4 rounded-xl bg-surface-card border border-white/5 hover:border-primary/30 transition-colors">
+                            <span class="material-symbols-outlined text-primary text-3xl">diversity_3</span>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Extensão da sua Equipe</h4>
+                                <p class="text-slate-400 text-sm">Comprometimento total com seus resultados e prazos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Placeholder for Partnership Vision Image -->
+                <div
+                    class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group h-[500px] bg-[#1a1023] flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white/10 text-[100px]">groups</span>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-background-dark/90 to-transparent">
+                        <p class="text-white/50 text-sm font-mono">Strategic Partnership Vision</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soluções Integradas (Merged Content) -->
+    <section class="py-24 bg-background-card relative" id="atuacao">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-3">O Que Fazemos</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-white max-w-2xl mx-auto">Soluções Integradas
+                    para<br>Software e Hardware</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Soluções Digitais Column -->
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="p-3 rounded-lg bg-primary/20 text-primary">
+                            <span class="material-symbols-outlined text-3xl">code</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white">Soluções Digitais</h4>
+                    </div>
+
+                    <div
+                        class="group p-6 rounded-xl bg-surface-card border border-border-dark hover:border-primary/50 transition-all duration-300">
+                        <h5 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-sm">terminal</span> Desenvolvimento
+                            Web & Mobile
+                        </h5>
+                        <p class="text-slate-400 text-sm">Sites institucionais, landing pages de alta conversão e
+                            aplicativos móveis focados na experiência do usuário.</p>
+                    </div>
+
+                    <div
+                        class="group p-6 rounded-xl bg-surface-card border border-border-dark hover:border-primary/50 transition-all duration-300">
+                        <h5 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-sm">integration_instructions</span>
+                            Sistemas Customizados
+                        </h5>
+                        <p class="text-slate-400 text-sm">Dashboards, CRMs e plataformas web desenvolvidas sob medida
+                            para as regras de negócio da sua empresa.</p>
+                    </div>
+
+                    <div
+                        class="group p-6 rounded-xl bg-surface-card border border-border-dark hover:border-primary/50 transition-all duration-300">
+                        <h5 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-sm">cloud_sync</span>
+                            Escalabilidade & Cloud
+                        </h5>
+                        <p class="text-slate-400 text-sm">Arquitetura de software planejada para crescer, utilizando
+                            tecnologias modernas e serviços em nuvem.</p>
+                    </div>
+                </div>
+
+                <!-- Infraestrutura Column -->
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="p-3 rounded-lg bg-primary/20 text-primary">
+                            <span class="material-symbols-outlined text-3xl">dns</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white">Infraestrutura Corporativa</h4>
+                    </div>
+
+                    <div
+                        class="group p-6 rounded-xl bg-surface-card border border-border-dark hover:border-primary/50 transition-all duration-300">
+                        <h5 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-sm">desktop_windows</span>
+                            Workstations High-End
+                        </h5>
+                        <p class="text-slate-400 text-sm">Montagem e configuração de estações de trabalho de alta
+                            performance para designers, desenvolvedores e engenheiros.</p>
+                    </div>
+
+                    <div
+                        class="group p-6 rounded-xl bg-surface-card border border-border-dark hover:border-primary/50 transition-all duration-300">
+                        <h5 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-sm">support_agent</span> Suporte
+                            Especializado
+                        </h5>
+                        <p class="text-slate-400 text-sm">Atendimento rápido e manutenção preventiva regular para evitar
+                            paradas inesperadas.</p>
+                    </div>
+
+                    <div
+                        class="group p-6 rounded-xl bg-surface-card border border-border-dark hover:border-primary/50 transition-all duration-300">
+                        <h5 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-sm">manage_accounts</span>
+                            Consultoria de TI
+                        </h5>
+                        <p class="text-slate-400 text-sm">Diagnóstico completo da sua infraestrutura atual e
+                            planejamento estratégico para upgrades e segurança.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Entregamos Valor (Methodology) -->
+    <section class="py-24 bg-[#0d0912] border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-3">Metodologia</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-white">Como Entregamos Valor</h3>
+            </div>
+            <div class="relative grid md:grid-cols-4 gap-8">
+                <!-- Connecting Line (Desktop) -->
+                <div
+                    class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-primary/30 to-transparent">
+                </div>
+                <!-- Step 1 -->
+                <div class="relative flex flex-col items-center text-center group">
+                    <div
+                        class="size-24 rounded-full bg-background-card border-2 border-border-dark flex items-center justify-center z-10 mb-6 group-hover:border-primary group-hover:shadow-[0_0_20px_rgba(127,13,242,0.4)] transition-all duration-300">
+                        <span class="material-symbols-outlined text-3xl text-white">chat</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">1. Diagnóstico</h4>
+                    <p class="text-sm text-slate-400">Entendemos a fundo as dores do seu negócio e identificamos
+                        oportunidades.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="relative flex flex-col items-center text-center group">
+                    <div
+                        class="size-24 rounded-full bg-background-card border-2 border-border-dark flex items-center justify-center z-10 mb-6 group-hover:border-primary group-hover:shadow-[0_0_20px_rgba(127,13,242,0.4)] transition-all duration-300">
+                        <span class="material-symbols-outlined text-3xl text-white">design_services</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">2. Planejamento</h4>
+                    <p class="text-sm text-slate-400">Desenhamos a arquitetura da solução ideal, focada em ROI e
+                        escalabilidade.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="relative flex flex-col items-center text-center group">
+                    <div
+                        class="size-24 rounded-full bg-background-card border-2 border-border-dark flex items-center justify-center z-10 mb-6 group-hover:border-primary group-hover:shadow-[0_0_20px_rgba(127,13,242,0.4)] transition-all duration-300">
+                        <span class="material-symbols-outlined text-3xl text-white">rocket_launch</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">3. Execução</h4>
+                    <p class="text-sm text-slate-400">Implementação ágil com sprints semanais e feedbacks constantes.
+                    </p>
+                </div>
+                <!-- Step 4 -->
+                <div class="relative flex flex-col items-center text-center group">
+                    <div
+                        class="size-24 rounded-full bg-background-card border-2 border-border-dark flex items-center justify-center z-10 mb-6 group-hover:border-primary group-hover:shadow-[0_0_20px_rgba(127,13,242,0.4)] transition-all duration-300">
+                        <span class="material-symbols-outlined text-3xl text-white">trending_up</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">4. Evolução</h4>
+                    <p class="text-sm text-slate-400">Monitoramento contínuo e proposição de melhorias para o longo
+                        prazo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por Que Ser Parceiro (Why Partner) -->
+    <section class="py-24 bg-background-card relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <!-- Image Placeholder -->
+                <div
+                    class="w-full md:w-1/2 rounded-2xl overflow-hidden border border-white/10 shadow-2xl h-[400px] bg-[#0d0912] flex items-center justify-center relative group">
+                    <span
+                        class="material-symbols-outlined text-primary/20 text-[120px] group-hover:scale-110 transition-transform duration-500">trending_up</span>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent to-transparent">
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-3">Benefícios</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-white mb-6">Por que escolher a RockByte?</h3>
+                    <div class="flex flex-col gap-6">
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-green-400 text-2xl mt-1">check_circle</span>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Redução de Custos e Riscos</h4>
+                                <p class="text-slate-400 text-sm">Prevenção de falhas que geram prejuízo e
+                                    infraestrutura otimizada para o seu orçamento.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-green-400 text-2xl mt-1">check_circle</span>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Continuidade Operacional</h4>
+                                <p class="text-slate-400 text-sm">Garantia de que seu negócio não vai parar. Suporte
+                                    proativo e monitoramento constante.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-green-400 text-2xl mt-1">check_circle</span>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Visão de Longo Prazo</h4>
+                                <p class="text-slate-400 text-sm">Não entregamos apenas um projeto. Construímos a base
+                                    tecnológica para os seus próximos 5 anos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-24 relative" id="contact">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-background-dark pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight">Pronto para o próximo nível?</h2>
+            <p class="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
+                Não deixe a tecnologia ser um gargalo. Transforme-a em sua vantagem competitiva hoje mesmo com a
+                RockByte.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <button
+                    class="w-full sm:w-auto flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold text-lg py-4 px-10 rounded-xl transition-all shadow-[0_4px_20px_rgba(127,13,242,0.4)] hover:shadow-[0_4px_40px_rgba(127,13,242,0.6)] hover:-translate-y-1">
+                    <span class="material-symbols-outlined">chat</span>
+                    Iniciar Conversa
+                </button>
+                <button
+                    class="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-lg py-4 px-10 rounded-xl transition-all shadow-lg hover:-translate-y-1">
+                    <svg class="w-6 h-6 fill-current" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-27.4l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
+                        </path>
+                    </svg>
+                    WhatsApp
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="border-t border-[#362249] bg-[#120b18] pt-16 pb-8 px-10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
+            <div class="flex flex-col gap-4 max-w-sm">
+                <div class="flex items-center gap-2 text-white mb-2">
+                    <img src="assets/images/logo.jpeg" alt="RockByte Studio" class="h-6 w-auto rounded-md">
+                    <span class="text-lg font-bold">RockByte Studio</span>
+                </div>
+                <p class="text-slate-500 text-sm">Transformando complexidade tecnológica em vantagem competitiva para o
+                    seu negócio.</p>
+            </div>
+            <div class="flex gap-12 md:gap-24 flex-wrap">
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wide">Navegação</h4>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="index.html">Home</a>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-sm"
+                        href="pacotes.html">Pacotes</a>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="#">Sobre Nós</a>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wide">Legal</h4>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="#">Privacidade</a>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="#">Termos de Uso</a>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wide">Contato</h4>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-sm"
+                        href="#">contato@rockbyte.com</a>
+                    <div class="flex gap-4 mt-1">
+                        <a class="text-slate-400 hover:text-white transition-colors" href="#"><i
+                                class="material-symbols-outlined text-[20px]">public</i></a>
+                        <a class="text-slate-400 hover:text-white transition-colors" href="#"><i
+                                class="material-symbols-outlined text-[20px]">mail</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="mt-12 border-t border-[#362249] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-600">
+            <p>© 2024 RockByte Studio. Todos os direitos reservados.</p>
+            <p>Designed with precision.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
