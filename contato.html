@@ -62,10 +62,22 @@
                 </div>
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button class="text-white p-2">
-                        <span class="material-symbols-outlined">menu</span>
+                    <button class="text-white p-2 focus:outline-none">
+                        <span class="material-symbols-outlined text-3xl">menu</span>
                     </button>
                 </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-background-dark/95 backdrop-blur-md border-b border-white/5 absolute w-full top-16 left-0"
+            id="mobile-menu">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors"
+                    href="index.html">Home</a>
+                <a class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors"
+                    href="pacotes.html">Pacotes</a>
+                <a class="block px-3 py-2 rounded-md text-base font-medium text-white bg-primary hover:bg-primary-dark transition-colors mt-4 text-center"
+                    href="contato.html">Falar com um Especialista</a>
             </div>
         </div>
     </nav>
@@ -223,10 +235,10 @@
                 <div class="flex flex-col gap-4">
                     <h4 class="text-white font-bold text-sm uppercase tracking-wide">Navegação</h4>
                     <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="index.html">Home</a>
-
                     <a class="text-slate-400 hover:text-primary transition-colors text-sm"
                         href="pacotes.html">Pacotes</a>
-                    <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="#">Sobre Nós</a>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="index.html">Sobre
+                        Nós</a>
                 </div>
                 <div class="flex flex-col gap-4">
                     <h4 class="text-white font-bold text-sm uppercase tracking-wide">Legal</h4>
@@ -236,7 +248,7 @@
                 <div class="flex flex-col gap-4">
                     <h4 class="text-white font-bold text-sm uppercase tracking-wide">Contato</h4>
                     <a class="text-slate-400 hover:text-primary transition-colors text-sm"
-                        href="#">contato@rockbyte.com</a>
+                        href="mailto:contato@rockbytestudio.com">contato@rockbytestudio.com</a>
                     <div class="flex gap-4 mt-1">
                         <a class="text-slate-400 hover:text-white transition-colors" href="#"><i
                                 class="material-symbols-outlined text-[20px]">public</i></a>
@@ -252,6 +264,7 @@
             <p>Designed with precision.</p>
         </div>
     </footer>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
