@@ -1,20 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const mobileMenuButton = document.querySelector('button.text-white.p-2 span.material-symbols-outlined').parentElement;
-    const nav = document.querySelector('nav');
-
-    // Create Mobile Menu Container if it doesn't exist (it will be added in HTML but this is a safeguard/reference)
-    let mobileMenu = document.getElementById('mobile-menu');
+    // The button will now have a specific ID or class structure for easier selection
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
     if (mobileMenuButton && mobileMenu) {
         mobileMenuButton.addEventListener('click', () => {
+            // Toggle the menu visibility
             mobileMenu.classList.toggle('hidden');
+
+            // Toggle the animation classes on the button (rotate lines)
+            mobileMenuButton.classList.toggle('active');
+
+            // Toggle body scroll lock
+            if (mobileMenu.classList.contains('hidden')) {
+                document.body.style.overflow = '';
+            } else {
+                document.body.style.overflow = 'hidden';
+            }
         });
     }
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
+    // Close menu when clicking on a link inside the menu
+    const menuLinks = mobileMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
             mobileMenu.classList.add('hidden');
-        }
+            mobileMenuButton.classList.remove('active');
+            document.body.style.overflow = '';
+        });
     });
 });
